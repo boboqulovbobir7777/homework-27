@@ -64,6 +64,27 @@ button {
   @include flex(column, stretch, stretch, 0);
   min-height: 100vh;
   .header {
+    .place {
+      width: 104px;
+      height: 1px;
+      background-color: rgba(200, 204, 216, 1);
+      rotate: 90deg;
+      transform: translateX(50%);
+      position: absolute;
+      left: -50px;
+      margin-bottom: 20px;
+      &::after {
+        content: "HOME";
+        @include text(18px, 700, rgba(200, 204, 216, 1), 139%);
+        letter-spacing: 18px;
+        position: absolute;
+        top: -10px;
+        left: 152px;
+      }
+      @media (max-width: 1350px) {
+        display: none;
+      }
+    }
     .navbar {
       padding: 56px 0;
       @include flex(row, stretch, center, 95px);
@@ -77,6 +98,7 @@ button {
       background-repeat: no-repeat;
       background-size: cover;
       padding: 186px 376px 179px 190px;
+      position: relative;
       .head-title {
         @include text(96px, 700, #fff, 80px);
         letter-spacing: -2px;
@@ -89,6 +111,26 @@ button {
       }
       .head-link {
         width: 252px;
+      }
+      .head-background-choose {
+        position: absolute;
+        bottom: 0;
+        left: -80px;
+        @include flex(row, center, center, 0);
+        .choose-item {
+          width: 80px;
+          height: 80px;
+          border-radius: 0;
+          background-color: #fff;
+          @include flex(row, center, center, 0);
+          @include text(18px, 700, rgba(125, 130, 143, 1), 25px);
+          transition-duration: 0.2s;
+          cursor: pointer;
+          &:hover {
+            @include text(18px, 700, rgba(255, 255, 255, 1), 25px);
+            background-color: rgba(27, 29, 35, 1);
+          }
+        }
       }
       @media (max-width: 1200px) {
         padding: 186px 58px 179px;

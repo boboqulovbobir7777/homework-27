@@ -123,6 +123,35 @@ button {
   gap: 0;
   min-height: 100vh;
 }
+.wrapper .header .place {
+  width: 104px;
+  height: 1px;
+  background-color: rgb(200, 204, 216);
+  rotate: 90deg;
+  -webkit-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+          transform: translateX(50%);
+  position: absolute;
+  left: -50px;
+  margin-bottom: 20px;
+}
+.wrapper .header .place::after {
+  content: "HOME";
+  font-family: "League Spartan", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 139%;
+  color: rgb(200, 204, 216);
+  letter-spacing: 18px;
+  position: absolute;
+  top: -10px;
+  left: 152px;
+}
+@media (max-width: 1350px) {
+  .wrapper .header .place {
+    display: none;
+  }
+}
 .wrapper .header .navbar {
   padding: 56px 0;
   display: -webkit-box;
@@ -149,6 +178,7 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 186px 376px 179px 190px;
+  position: relative;
 }
 .wrapper .header .head .head-title {
   font-family: "League Spartan", sans-serif;
@@ -170,6 +200,61 @@ button {
 }
 .wrapper .header .head .head-link {
   width: 252px;
+}
+.wrapper .header .head .head-background-choose {
+  position: absolute;
+  bottom: 0;
+  left: -80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0;
+}
+.wrapper .header .head .head-background-choose .choose-item {
+  width: 80px;
+  height: 80px;
+  border-radius: 0;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0;
+  font-family: "League Spartan", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  color: rgb(125, 130, 143);
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  cursor: pointer;
+}
+.wrapper .header .head .head-background-choose .choose-item:hover {
+  font-family: "League Spartan", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(27, 29, 35);
 }
 @media (max-width: 1200px) {
   .wrapper .header .head {
